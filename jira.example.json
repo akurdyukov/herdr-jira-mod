@@ -1,0 +1,15 @@
+{
+  "base_url": "https://jira.example.com",
+  "flavor": "server",
+  "auth": "bearer",
+  "token_cmd": ["pass", "show", "jira/token"],
+  "token_on": "my-remote-box",
+  "filters": [
+    { "name": "Mine", "jql": "assignee = currentUser() AND resolution = Unresolved ORDER BY updated DESC" },
+    { "name": "In progress", "jql": "assignee = currentUser() AND statusCategory = \"In Progress\" ORDER BY updated DESC" },
+    { "name": "Reported by me", "jql": "reporter = currentUser() AND resolution = Unresolved ORDER BY created DESC" }
+  ],
+  "agent": ["claude"],
+  "branch": "{key}-{slug}",
+  "refresh_minutes": 5
+}
