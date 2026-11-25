@@ -1,0 +1,6 @@
+{
+  "name": "herdr-jira-mod",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --import ./test/register.mjs --test test/*.test.mjs" }
+}
